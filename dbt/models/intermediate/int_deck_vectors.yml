@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_deck_vectors
+    description: "Deck-level feature vectors derived from tournament decklists. One row per deck with aggregated card statistics. This is the direct input to the k-means clustering model that discovers archetypes."
+    columns:
+      - name: deck_id
+        description: "Unique deck identifier from MTGTop8"
+        tests:
+          - not_null
+          - unique
+      - name: archetype
+        description: "Human-assigned archetype label from MTGTop8 — used as ground truth to validate clustering"
+      - name: unique_cards
+        description: "Number of distinct card names in the deck"
+      - name: total_cards
+        description: "Total card count including quantities (typically 60 mainboard)"
+      - name: avg_cmc
+        description: "Average converted mana cost — key signal for aggro vs control"
+      - name: max_cmc
+        description: "Highest CMC card in the deck"
+      - name: creature_count
+        description: "Total creature copies"
+      - name: instant_count
+        description: "Total instant copies"
+      - name: sorcery_count
+        description: "Total sorcery copies"
+      - name: land_count
+        description: "Total land copies"
+      - name: artifact_count
+        description: "Total artifact copies"
+      - name: enchantment_count
+        description: "Total enchantment copies"
+      - name: red_cards
+        description: "Total copies of red cards — signal for aggro/burn"
+      - name: blue_cards
+        description: "Total copies of blue cards — signal for control/tempo"
+      - name: black_cards
+        description: "Total copies of black cards — signal for midrange/combo"
+      - name: green_cards
+        description: "Total copies of green cards — signal for ramp/combo"
+      - name: white_cards
+        description: "Total copies of white cards — signal for aggro/control"

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_decklists
+    description: "Cleaned tournament decklist data scraped from MTGTop8. One row per card per deck."
+    columns:
+      - name: deck_id
+        description: "Unique identifier for each tournament decklist"
+        tests:
+          - not_null
+      - name: archetype
+        description: "Raw archetype label from MTGTop8 (e.g. 'Boros Aggro', 'UrzaTron')"
+      - name: archetype_clean
+        description: "Archetype with Unknown values set to null"
+      - name: card_name
+        description: "Card name as it appears on MTGTop8"
+        tests:
+          - not_null
+      - name: quantity
+        description: "Number of copies of this card in the deck"
+        tests:
+          - not_null

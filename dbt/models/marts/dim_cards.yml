@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: dim_cards
+    description: "Final card dimension table. Clean, enriched Modern-legal cards ready for the recommender and budget filter. One row per unique card name."
+    columns:
+      - name: name
+        description: "Unique card name"
+        tests:
+          - not_null
+          - unique
+      - name: mana_cost
+        description: "Mana cost string e.g. {1}{U}{R}"
+      - name: cmc
+        description: "Converted mana cost as integer"
+        tests:
+          - not_null
+      - name: type_line
+        description: "Full type line e.g. Creature — Human Wizard"
+      - name: card_category
+        description: "Simplified card type derived from type_line"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Planeswalker', 'Other']
+      - name: oracle_text
+        description: "Full rules text of the card"
+      - name: colors
+        description: "Colour identity string e.g. R, UR, WUB"
+      - name: price_usd
+        description: "Current market price in USD from Scryfall"
+      - name: price_tier
+        description: "Budget classification: budget (<$1), mid (<$5), expensive (<$20), staple ($20+)"
+      - name: color_label
+        description: "Human readable colour label e.g. Red, Blue, Multicolor"
+      - name: has_discard
+        description: "True if card contains discard effects in oracle text"
+      - name: has_counterspell
+        description: "True if card contains counter target spell effects"
+      - name: has_land_destruction
+        description: "True if card contains land destruction effects"
+      - name: has_graveyard_hate
+        description: "True if card exiles graveyards"

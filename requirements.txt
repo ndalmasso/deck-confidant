@@ -1,0 +1,9 @@
+dbt-databricks
+sentence-transformers
+scikit-learn
+streamlit
+requests
+pandas
+mlflow
+beautifulsoup4
+python-dotenv
