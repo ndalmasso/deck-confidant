@@ -7,3 +7,5 @@ sources:
     tables:
       - name: raw_cards
         description: "Raw Modern-legal card data loaded from Scryfall"
+      - name: raw_decklists
+        description: "Tournament decklists scraped from MTGTop8"
