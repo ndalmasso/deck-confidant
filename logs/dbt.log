@@ -32,3 +32,19 @@ Happy modeling!
 [0m16:02:16.697727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e465531a480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e4622c39070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e461cb21940>]}
 [0m16:02:16.698040 [debug] [MainThread]: Flushing usage events
 [0m16:02:20.476412 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:23:04.804552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea6c11a6de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea6c0ac18e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea6c3654500>]}
+
+
+============================== 17:23:04.808832 | 9f5fcfd2-aea9-455a-a996-ce6921e9d409 ==============================
+[0m17:23:04.808832 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:23:04.809231 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_path': 'logs', 'no_print': 'None', 'log_format': 'default', 'printer_width': '80', 'cache_selected_only': 'False', 'use_colors': 'True', 'invocation_command': 'dbt run --select int_deck_vectors', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'debug': 'False', 'log_cache_events': 'False', 'profiles_dir': '/home/dalma/.dbt', 'quiet': 'False', 'static_parser': 'True', 'write_json': 'True', 'empty': 'False', 'version_check': 'True', 'target_path': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'indirect_selection': 'eager'}
+[0m17:23:04.809529 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/dalma/deck-confidant/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:23:04.810478 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.047062524, "process_in_blocks": "67440", "process_kernel_time": 0.145617, "process_mem_max_rss": "99416", "process_out_blocks": "16", "process_user_time": 1.006083}
+[0m17:23:04.810788 [debug] [MainThread]: Command `dbt run` failed at 17:23:04.810721 after 0.05 seconds
+[0m17:23:04.811021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea6c14cd670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea6c1c74b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea6c110dd60>]}
+[0m17:23:04.811250 [debug] [MainThread]: Flushing usage events
+[0m17:23:05.776750 [debug] [MainThread]: An error was encountered while trying to flush usage events
