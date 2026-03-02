@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: deck_confidant
+    catalog: workspace
+    schema: deck_confidant
+    tables:
+      - name: raw_cards
+        description: "Raw Modern-legal card data loaded from Scryfall"

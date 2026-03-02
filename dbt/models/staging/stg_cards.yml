@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_cards
+    description: "Cleaned Modern-legal cards from Scryfall. One row per card."
+    columns:
+      - name: name
+        description: "Card name"
+        tests:
+          - not_null
+          - unique
+      - name: cmc
+        description: "Converted mana cost"
+        tests:
+          - not_null
+      - name: card_category
+        description: "Derived card type"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Creature', 'Instant', 'Sorcery', 'Enchantment', 'Artifact', 'Land', 'Planeswalker', 'Other']

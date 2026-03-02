@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+profiles.yml
+*.token
+*.json
+*.csv
+*.parquet
