@@ -10,3 +10,4 @@ profiles.yml
 *.json
 *.csv
 *.parquet
+data/pipeline_state.json
