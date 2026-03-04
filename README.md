@@ -1,4 +1,6 @@
 # Deck Confidant 🃏
+
+## Overview
 > *"Greatness, at any cost."* — Dark Confidant
 
 A Modern MTG deck builder powered by a real data engineering pipeline and machine learning. Give it your play style, budget, and format constraints — it builds you a 75-card deck and adapts it when you want to swap cards.
